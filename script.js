@@ -219,9 +219,15 @@ function updateCartUI() {
         
         const totalItems = cart.reduce((acc, item) => acc + item.qty, 0);
         const totalValue = cart.reduce((acc, item) => acc + item.total, 0);
-        
+
         document.getElementById('cart-bar-qty').innerText = totalItems;
         document.getElementById('cart-bar-total').innerText = formatMoney(totalValue);
+        
+        if(totalItems === 1){
+            document.getElementById('cart-bar-text').innerText = " item";
+        }else{
+            document.getElementById('cart-bar-text').innerText = " itens";
+        }
     } else {
         cartBar.classList.add('hidden');
         document.body.classList.remove('cart-active');

@@ -14,9 +14,9 @@ To do:
 -> Colocar um degradê de branco para o 'light' e aplicar na nav (ok)
 -> Refazer os links das imagens com erro (ok)
 -> Refazer os extras e adicionais que não fazem sentido ou estão faltando (ok)
+-> Analisar os erros mostrados no console (F12) (resolvido o label)
 -> Erro ao retirar um item do carrinho 
 -> Avaliar a possibilidade de retirar o id dos itens
--> Analisar os erros mostrados no console (F12)
 
 Com relação ao todo:
 -> Ter o site funcionando sem erros grandes
