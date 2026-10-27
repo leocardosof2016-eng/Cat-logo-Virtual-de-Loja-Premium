@@ -1,0 +1,47 @@
+Imagens usadas como referência estética:
+https://soloweb.com.br/pages/modelos-sites-premium/img/shop35.jpg
+https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT9yyGiOT5uoMbVlfjxtlskChKEX9Lfls2zfUYYfHFYA&s=10
+https://soloweb.com.br/pages/modelos-sites-premium/img/shop50.jpg
+
+Possíveis cores de background
+#faf0e6
+
+Cor antiga do nav
+    <nav class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm">
+
+To do:
+-> Aumentar a transparência do header (ok)
+-> Colocar um degradê de branco para o 'light' e aplicar na nav (ok)
+-> Refazer os links das imagens com erro (ok)
+-> Refazer os extras e adicionais que não fazem sentido ou estão faltando (ok)
+-> Erro ao retirar um item do carrinho 
+-> Avaliar a possibilidade de retirar o id dos itens
+-> Analisar os erros mostrados no console (F12)
+
+Com relação ao todo:
+-> Ter o site funcionando sem erros grandes
+-> Documento com as especificações do site e a lista de requisitos para as outras possibilidades
+-> Slideshow pra apresentar (opcional, porém recomendado)
+
+
+Modificações ideais que ainda podem ser realizadas:
+-> Adicionar função de colocar mais de uma imagem por produto, já definido na conversa no Gemini
+-> Definir funcionalidade para seleção de produtos diferentes do mesmo tipo. Ex: tamanhos diferentes da mesma peça de roupa ou sabores diferentes do mesmo geladinho.
+    -> Essa feature funcionaria como os adicionais, no entanto, para cada produto ligeiramente diferente, teríamos um seletor de quantidade próprio.
+    Ex: Produto selecionado = Geladinho Gourmet
+        Sabores:
+        Chocolate   R$ 5,00   - 1 +
+        Morango     R$ 6,00   - 2 +
+
+        TOTAL: R$ 17,00
+    Vantagem: Permite que o usuário compre diferentes variações de um mesmo produto com mais facilidade.
+
+-> Consertar as imagens mal dimensionadas nos modais dos produtos
+    Configuração inicial das img dos modais:
+    <img id="modal-img" src="" alt="Produto" class="w-full h-64 object-cover">
+    index.html (linha 92)
+
+    Trocando o object-cover por object-contain:
+    <img id="modal-img" src="" alt="Produto" class="w-full max-h-96 object-contain bg-gray-50 mt-4">
+        Melhor opção até agora, porém, fica bastante espaço dos lados.
+

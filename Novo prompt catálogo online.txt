@@ -1,0 +1,48 @@
+Aja como um Desenvolvedor Front-end Sênior especialista em UI/UX Mobile e E-commerce. Preciso que você crie um código modularizado, separando claramente o conteúdo em três blocos de código distintos: index.html, style.css e script.js, para um "Catálogo Digital de Produtos" chamado **Escobar Variedades**.
+O código deve ser totalmente funcional, responsivo e esteticamente premium. Siga estritamente as especificações abaixo:
+### 1. Stack Tecnológica
+- **Estrutura:** HTML5.
+- **Estilização:** Tailwind CSS (via CDN) + Estilos customizados externos (`<link rel="stylesheet" href="./style.css">`).
+- **Ícones:** FontAwesome 6 (via CDN).
+- **Fontes:** Google Fonts ('Plus Jakarta Sans' ou 'Inter').
+- **Lógica:** Vanilla JavaScript (sem frameworks como React/Vue).
+### 2. Identidade Visual (Design System)
+- **Tema:** Light Mode/Premium.
+- **Cores Principais:** Fundo branco e cinza claro, Detalhes em Verde (`#3eb521`) ou Ciano (`#1a918b`) para dar ar para o nicho de variedades premium, Texto escuro, preto ou cinza escuro.
+- **Efeitos:** Design majoritaraimente plano (flat) e limpo. Bordas arredondadas e bem definidas com utilização de sombra para destaque.
+- **Elementos:** Cards com design limpo, botões com hover suave, inputs modernos.
+### 3. Estrutura da Página
+- **Header:** Imagem de fundo neutra (minimalista) com overlay claro, título "Escobar Variedades", badge de status "Produtos Variados de Alta Qualidade" (com estrela pulsando) e botão de busca.
+- **Navegação:** Barra de categorias (Todos, Tecnológicos, Joias, Roupas, Gelados) com rolagem horizontal (sticky no topo). Ícones reconhecíveis para cada categoria. Quando o Todos estiver selecionado, os items da loja deverão aparecer em segmentos bem determinados de qual seção pertencem.
+- **Lista de Produtos:** Cards com imagem do produto, título, "A partir de R$..." e botão de ver detalhes.
+### 4. Funcionalidades (JavaScript)
+- **Busca:** Um modal de busca em tela cheia que filtra os produtos por nome ou especificações.
+- **Modal de Produto (Vitrine):** Ao clicar no item, abre um modal (slide-up) mostrando:
+  - Foto grande do produto.
+  - Descrição detalhada (Carregador de 25W, Anel de Ouro 24 Quilates, etc.).
+  - **Opcionais/Upsell:** Checkboxes para adicionar serviços ou acessórios (ex: "Adicionar Leite em pó (+R$ 3,00)", "Adicionar Granola (+R$ 4,00)", "Embalar para Presente (+R$ 10,00"). A soma deve atualizar o preço total dinamicamente.
+  - Campo de observação (Ex: "Prefiro na cor preta se tiver").
+  - Campo de observação (Ex: "Prefiro na cor preta se tiver").
+  - Seletor de quantidade (- 1 +).
+  - Botão "Adicionar ao Carrinho" com o preço final calculado.
+- **Carrinho de Compras:**
+  - Uma barra flutuante "Minha Sacola" aparece no rodapé apenas quando há itens.
+  - **Botão WhatsApp Flutuante:** Fixo no canto inferior direito. Deve subir ligeiramente para não ficar atrás da barra do carrinho quando ela aparecer.
+- **Checkout (Modal Final):**
+  - Lista de itens escolhidos.
+  - Campos para Nome, e Forma de Pagamento (Pix, Dinheiro, Débito, Crédito)
+  - Resumo financeiro (Subtotal, Desconto, Total).
+  - Botão "Finalizar no WhatsApp": Monta uma mensagem formatada com a lista de produtos, forma de pagamento e total, abrindo a API do WhatsApp.
+### 5. Dados (Hardcoded)
+5. Dados (Hardcoded)
+Crie um array de objetos CATALOG_ITEMS com pelo menos 16 itens distribuídos igualmente entre as 4 categorias da loja:
+Tecnológicos: (Ex: Carregador Turbo 66W, Fone Bluetooth, Película de Vidro, Película de Hidrogel).
+Joias: (Ex: Anel de Prata, Colar Ponto de Luz, Pulseira Banhada a Ouro, Brinco Argola).
+Roupas: (Ex: Camisa de Linho, Bermuda de Academia, Camiseta Básica Premium, Calça Jeans).
+Gelados: (Ex: Açaí 500ml, Picolé Artesanal, Sorvete de Pistache, ).
+Cada objeto deve conter: id, nome, descrição, categoria, preço, e uma URL de imagem do Unsplash correspondente ao nicho do produto. Alguns itens devem possuir um array de extras (ex: "Adicionar Leite em Pó" para açaí, ou "Embalagem para Presente" para joias).
+### 6. Detalhes de CSS Importantes
+- Remova a scrollbar padrão (`no-scrollbar`).
+- Crie animações suaves de `pulse` para o botão do WhatsApp.
+- Checkboxes devem ser customizados (estilo flat, borda colorida quando marcadas).
+Gere o código completo de forma modular, separando claramente em três blocos de código distintos (index.html, style.css e script.js).
