@@ -311,10 +311,10 @@ document.getElementById('btn-send-whatsapp').addEventListener('click', () => {
 
     const total = cart.reduce((acc, item) => acc + item.total, 0);
     
-    let text = `*Novo Pedido - Escobar Variedades* 🛍️\n\n*Cliente:* ${name}\n*Pagamento:* ${payment}\n\n*Itens do Pedido:*\n`;
+    let text = `*Novo Pedido - Escobar Variedades* \n\n*Cliente:* ${name}\n*Pagamento:* ${payment}\n\n*Itens do Pedido:*\n`;
     
     cart.forEach(item => {
-        text += `\n▪️ ${item.qty}x *${item.product.name}*`;
+        text += `\n> ${item.qty}x *${item.product.name}*`;
         if(item.extras.length > 0) text += `\n   _Adicionais: ${item.extras.map(e => e.name).join(', ')}_`;
         if(item.obs) text += `\n   _Obs: ${item.obs}_`;
         text += `\n   _Valor: ${formatMoney(item.total)}_`;
