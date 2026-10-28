@@ -1,28 +1,58 @@
 const CATALOG_ITEMS = [
-    //{ id:, name:, desc:, category:, price:, img:, extras:[]}
+    //{ id:, name:, desc:, category:, price:, 
+    // img:[
+    // ], extras:[]}
+
     // TECNOLÓGICOS
-    { id: 1, name: "Carregador Turbo 66W", desc: "Carregador ultra rápido com tecnologia GaN e cabo reforçado.", category: "Tecnológicos", price: 129.90, img: "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=80", extras: [{name: "Cabo Extra de 2m", price: 35.00}] },
-    { id: 2, name: "Fone Bluetooth TWS", desc: "Fone com cancelamento de ruído ativo e bateria de 24 horas.", category: "Tecnológicos", price: 199.90, img: "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=80", extras: [{name: "Case de Silicone", price: 25.00}] },
-    { id: 3, name: "Película de Vidro 3D", desc: "Proteção máxima contra quedas e arranhões.", category: "Tecnológicos", price: 29.90, img: "https://images.unsplash.com/photo-1596253399107-ed1c47d856fb?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D", extras: [{name: "Aplicação na Loja", price: 10.00}] },
-    { id: 4, name: "Película de Hidrogel", desc: "Autoreparável, ideal para telas curvas e sensibilidade touch.", category: "Tecnológicos", price: 49.90, img: "https://images.unsplash.com/photo-1629131723732-900ccc9c745c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D", extras: [{name: "Aplicação na Loja", price: 10.00}] },
+    { id: 1, name: "Carregador Turbo 66W", desc: "Carregador ultra rápido com tecnologia GaN e cabo reforçado.", category: "Tecnológicos", price: 129.90, 
+        img: [
+            "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=80",
+            "https://images.unsplash.com/photo-1596877445530-ad74838754c6?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+            "https://images.unsplash.com/photo-1725304382197-663ae3864750?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+        ], extras: [{name: "Cabo Extra de 2m", price: 35.00}] },
+    { id: 2, name: "Fone Bluetooth TWS", desc: "Fone com cancelamento de ruído ativo e bateria de 24 horas.", category: "Tecnológicos", price: 199.90, 
+        img: [
+            "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=80"], extras: [{name: "Case de Silicone", price: 25.00}] },
+    { id: 3, name: "Película de Vidro 3D", desc: "Proteção máxima contra quedas e arranhões.", category: "Tecnológicos", price: 29.90, 
+        img: [
+            "https://images.unsplash.com/photo-1596253399107-ed1c47d856fb?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"], extras: [{name: "Aplicação na Loja", price: 10.00}] },
+    { id: 4, name: "Película de Hidrogel", desc: "Autoreparável, ideal para telas curvas e sensibilidade touch.", category: "Tecnológicos", price: 49.90, 
+        img: [
+            "https://images.unsplash.com/photo-1629131723732-900ccc9c745c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"], extras: [{name: "Aplicação na Loja", price: 10.00}] },
     
     // Jóias
-    { id: 5, name: "Anel de Prata 925", desc: "Design minimalista e elegante em prata de lei.", category: "Jóias", price: 89.90, img: "https://images.unsplash.com/photo-1656010280156-fa8c1793c235?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D", extras: [{name: "Embalar para Presente", price: 15.00}, {name: "Limpa Pratas 30ml", price: 25.00}, {name: "Case almofadada", price: 10.00}] },
-    { id: 6, name: "Colar Ponto de Luz", desc: "Delicado colar com pingente de zircônia brilhante.", category: "Jóias", price: 79.90, img: "https://media.istockphoto.com/id/1203787084/pt/foto/elegant-white-gold-necklace-with-diamonds.webp?a=1&b=1&s=612x612&w=0&k=20&c=GN5rjy1vG9xHRnOScN4iprFG7v4ND2812vL_NWVJ010=", extras: [{name: "Embalar para Presente", price: 15.00}, {name: "Case almofadada", price: 10.00}] },
-    { id: 7, name: "Pulseira Banhada a Ouro", desc: "Estilo cartier 18k com banho de alta durabilidade.", category: "Jóias", price: 149.90, img: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=80", extras: [{name: "Embalar para Presente", price: 15.00}, {name: "Case almofadada", price: 10.00}] },
-    { id: 8, name: "Brinco Argola Ouro 18k", desc: "Argolas clássicas lisas, tamanho médio.", category: "Jóias", price: 119.90, img: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=80", extras: [{name: "Embalar para Presente", price: 15.00}, {name: "Case almofadada", price: 10.00}] },
+    { id: 5, name: "Anel de Prata 925", desc: "Design minimalista e elegante em prata de lei.", category: "Jóias", price: 89.90, 
+        img: [
+            "https://images.unsplash.com/photo-1656010280156-fa8c1793c235?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"], extras: [{name: "Embalar para Presente", price: 15.00}, {name: "Limpa Pratas 30ml", price: 25.00}, {name: "Case almofadada", price: 10.00}] },
+    { id: 6, name: "Colar Ponto de Luz", desc: "Delicado colar com pingente de zircônia brilhante.", category: "Jóias", price: 79.90, 
+        img: [
+            "https://media.istockphoto.com/id/1203787084/pt/foto/elegant-white-gold-necklace-with-diamonds.webp?a=1&b=1&s=612x612&w=0&k=20&c=GN5rjy1vG9xHRnOScN4iprFG7v4ND2812vL_NWVJ010="], extras: [{name: "Embalar para Presente", price: 15.00}, {name: "Case almofadada", price: 10.00}] },
+    { id: 7, name: "Pulseira Banhada a Ouro", desc: "Estilo cartier 18k com banho de alta durabilidade.", category: "Jóias", price: 149.90, 
+        img: [
+            "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=80"], extras: [{name: "Embalar para Presente", price: 15.00}, {name: "Case almofadada", price: 10.00}] },
+    { id: 8, name: "Brinco Argola Ouro 18k", desc: "Argolas clássicas lisas, tamanho médio.", category: "Jóias", price: 119.90, 
+        img: [
+            "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=80"], extras: [{name: "Embalar para Presente", price: 15.00}, {name: "Case almofadada", price: 10.00}] },
     
     // ROUPAS
-    { id: 9, name: "Camisa de Linho Premium", desc: "Respirável e sofisticada, perfeita para o verão.", category: "Roupas", price: 159.90, img: "https://images.unsplash.com/photo-1713881649391-a1c8ddaf83cd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D", extras: [{name: "Embalar para Presente", price: 15.00}] },
-    { id: 10, name: "Bermuda de Academia", desc: "Tecido dry-fit com bolso invisível para celular.", category: "Roupas", price: 69.90, img: "https://images.unsplash.com/photo-1785355064366-68a094d13651?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D", extras: [{name: "Embalar para Presente", price: 15.00}] },
-    { id: 11, name: "Camiseta Básica Premium", desc: "100% algodão egípcio, não desbota e não encolhe.", category: "Roupas", price: 89.90, img: "https://images.unsplash.com/photo-1777901513094-f8b4ca262d57?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D", extras: [{name: "Embalar para Presente", price: 15.00}] },
-    { id: 12, name: "Calça Jeans Skinny", desc: "Modelagem justa com bastante elastano para conforto.", category: "Roupas", price: 139.90, img: "https://images.unsplash.com/photo-1584865288642-42078afe6942?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=80", extras: [{name: "Acompanhar Cinto de Couro", price: 35.00}, {name: "Embalar para Presente", price: 15.00}] },
+    { id: 9, name: "Camisa de Linho Premium", desc: "Respirável e sofisticada, perfeita para o verão.", category: "Roupas", price: 159.90, 
+        img: ["https://images.unsplash.com/photo-1713881649391-a1c8ddaf83cd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"], extras: [{name: "Embalar para Presente", price: 15.00}] },
+    { id: 10, name: "Bermuda de Academia", desc: "Tecido dry-fit com bolso invisível para celular.", category: "Roupas", price: 69.90, 
+        img: ["https://images.unsplash.com/photo-1785355064366-68a094d13651?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"], extras: [{name: "Embalar para Presente", price: 15.00}] },
+    { id: 11, name: "Camiseta Básica Premium", desc: "100% algodão egípcio, não desbota e não encolhe.", category: "Roupas", price: 89.90, 
+        img: ["https://images.unsplash.com/photo-1777901513094-f8b4ca262d57?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"], extras: [{name: "Embalar para Presente", price: 15.00}] },
+    { id: 12, name: "Calça Jeans Skinny", desc: "Modelagem justa com bastante elastano para conforto.", category: "Roupas", price: 139.90, 
+        img: ["https://images.unsplash.com/photo-1584865288642-42078afe6942?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=80"], extras: [{name: "Acompanhar Cinto de Couro", price: 35.00}, {name: "Embalar para Presente", price: 15.00}] },
 
     // GELADOS
-    { id: 13, name: "Açaí 500ml", desc: "Açaí puro e cremoso, batido na hora.\nProduto deve ser retirado na loja.", category: "Gelados", price: 18.00, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHnv62qTctPZ7-xXSML1t6pzTiQCeSRGx3LfF9IwntPg&s=10", extras: [{name: "Leite em Pó", price: 3.00}, {name: "Leite Condensado", price: 3.50}, {name: "Morango Fresco", price: 4.00}, {name: "Nutella", price: 6.00}] },
-    { id: 14, name: "Picolé Artesanal Frutas", desc: "Feito com 100% fruta natural, zero conservantes.", category: "Gelados", price: 6.00, img: "https://images.unsplash.com/photo-1501443762994-82bd5dace89a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=80", extras: [] },
-    { id: 15, name: "Sorvete de Pistache Premium", desc: "Massa artesanal italiana, 2 bolas.", category: "Gelados", price: 24.00, img: "https://images.unsplash.com/photo-1603736029103-dafad0eb0906?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D", extras: [{name: "Calda Quente de Chocolate", price: 5.00}, {name: "Castanhas Trituradas", price: 4.00}] },
-    { id: 16, name: "Geladinho Gourmet Ninho", desc: "Geladinho super cremoso de Leite Ninho com Nutella.", category: "Gelados", price: 8.00, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGubJAs4JKlBBEwl6r_z1bC86TLq24uriKMDpWpiz5tQ&s=10", extras: [] }
+    { id: 13, name: "Açaí 500ml", desc: "Açaí puro e cremoso, batido na hora.\nProduto deve ser retirado na loja.", category: "Gelados", price: 18.00, 
+        img: ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHnv62qTctPZ7-xXSML1t6pzTiQCeSRGx3LfF9IwntPg&s=10"], extras: [{name: "Leite em Pó", price: 3.00}, {name: "Leite Condensado", price: 3.50}, {name: "Morango Fresco", price: 4.00}, {name: "Nutella", price: 6.00}] },
+    { id: 14, name: "Picolé Artesanal Frutas", desc: "Feito com 100% fruta natural, zero conservantes.", category: "Gelados", price: 6.00, 
+        img: ["https://images.unsplash.com/photo-1501443762994-82bd5dace89a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=80"], extras: [] },
+    { id: 15, name: "Sorvete de Pistache Premium", desc: "Massa artesanal italiana, 2 bolas.", category: "Gelados", price: 24.00, 
+        img: ["https://images.unsplash.com/photo-1603736029103-dafad0eb0906?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"], extras: [{name: "Calda Quente de Chocolate", price: 5.00}, {name: "Castanhas Trituradas", price: 4.00}] },
+    { id: 16, name: "Geladinho Gourmet Ninho", desc: "Geladinho super cremoso de Leite Ninho com Nutella.", category: "Gelados", price: 8.00, 
+        img: ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGubJAs4JKlBBEwl6r_z1bC86TLq24uriKMDpWpiz5tQ&s=10"], extras: [] }
 ];
 
 const CATEGORIES = ["Todos", "Tecnológicos", "Jóias", "Roupas", "Gelados"];
@@ -38,6 +68,7 @@ let cart = [];
 let currentProduct = null;
 let currentQty = 1;
 let selectedExtras = [];
+let currentImageIndex = 0;
 
 // Formata moeda
 const formatMoney = (val) => val.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
@@ -74,7 +105,7 @@ function renderProducts(category, container = document.getElementById('products-
     const renderCard = (item) => `
         <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow cursor-pointer" onclick="openProductModal(${item.id})">
             <div class="aspect-square bg-gray-100 overflow-hidden relative">
-                <img src="${item.img}" alt="${item.name}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                <img src="${item.img[0]}" alt="${item.name}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
                 <span class="absolute top-3 right-3 bg-white/90 backdrop-blur text-xs font-bold px-2.5 py-1 rounded-full text-gray-800 shadow-sm">${item.category}</span>
             </div>
             <div class="p-4">
@@ -132,8 +163,9 @@ window.openProductModal = (id) => {
     currentProduct = CATALOG_ITEMS.find(i => i.id === id);
     currentQty = 1;
     selectedExtras = [];
+    currentImageIndex = 0;
     
-    document.getElementById('modal-img').src = currentProduct.img;
+    document.getElementById('modal-img').src = currentProduct.img[currentImageIndex];
     document.getElementById('modal-title').innerText = currentProduct.name;
     document.getElementById('modal-desc').innerText = currentProduct.desc;
     document.getElementById('modal-obs').value = '';
@@ -157,6 +189,22 @@ window.openProductModal = (id) => {
         extrasDiv.innerHTML = '';
     }
 
+    //Aparição dos elementos do carrossel de imagens
+    const btnPrev = document.getElementById('btn-prev-img');
+    const btnNext = document.getElementById('btn-next-img');
+    const imgCounter = document.getElementById('image-counter');
+    
+    if (currentProduct.img.length > 1) {
+        btnPrev.classList.remove('hidden');
+        btnNext.classList.remove('hidden');
+        imgCounter.classList.remove('hidden');
+        imgCounter.innerText = `1/${currentProduct.img.length}`;
+    } else {
+        btnPrev.classList.add('hidden');
+        btnNext.classList.add('hidden');
+        imgCounter.classList.add('hidden');
+    }
+
     updateModalPrice();
     document.getElementById('product-modal').classList.remove('hidden');
     document.getElementById('product-modal').classList.add('flex');
@@ -167,6 +215,30 @@ document.getElementById('close-product').addEventListener('click', () => {
     document.getElementById('product-modal').classList.add('hidden');
     document.getElementById('product-modal').classList.remove('flex');
     document.body.style.overflow = 'auto';
+});
+
+//Interação das setas do carrossel de imagens
+function updateCarouselDisplay() {
+    document.getElementById('modal-img').src = currentProduct.img[currentImageIndex];
+    document.getElementById('image-counter').innerText = `${currentImageIndex + 1}/${currentProduct.img.length}`;
+}
+
+document.getElementById('btn-prev-img').addEventListener('click', (e) => {
+    e.stopPropagation(); // Evita fechar coisas caso clique vazado
+    if (!currentProduct || currentProduct.img.length <= 1) return;
+    
+    // Volta 1 índice. Se estiver no primeiro, vai para a última imagem
+    currentImageIndex = (currentImageIndex - 1 + currentProduct.img.length) % currentProduct.img.length;
+    updateCarouselDisplay();
+});
+
+document.getElementById('btn-next-img').addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (!currentProduct || currentProduct.img.length <= 1) return;
+    
+    // Avança 1 índice. Se estiver no último, volta para o primeiro
+    currentImageIndex = (currentImageIndex + 1) % currentProduct.img.length;
+    updateCarouselDisplay();
 });
 
 // Atualizar Preço Modal
@@ -264,7 +336,7 @@ document.getElementById('open-checkout').addEventListener('click', () => {
     const itemsContainer = document.getElementById('checkout-items');
     itemsContainer.innerHTML = cart.map((item, index) => `
         <div class="flex gap-3 relative pb-4 mb-4 border-b border-gray-50 last:border-0 last:mb-0 last:pb-0">
-            <img src="${item.product.img}" class="w-16 h-16 rounded-xl object-cover bg-gray-100">
+            <img src="${item.product.img[0]}" class="w-16 h-16 rounded-xl object-cover bg-gray-100">
             <div class="flex-1">
                 <h4 class="font-bold text-sm text-gray-900 leading-tight">${item.product.name}</h4>
                 ${item.extras.length > 0 ? `<p class="text-xs text-gray-500 mt-0.5">+ ${item.extras.map(e => e.name).join(', ')}</p>` : ''}

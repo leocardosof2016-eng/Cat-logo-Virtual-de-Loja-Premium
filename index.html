@@ -89,8 +89,25 @@
                 <i class="fa-solid fa-times"></i>
             </button>
             <div class="overflow-y-auto pb-24"> 
-                <img id="modal-img" src="" alt="Produto" class="w-full h-64 object-cover">
-                <div class="p-5">
+                <!-- Área da imagem com Carrossel -->
+                <div class="relative w-full h-64 bg-gray-100 flex-shrink-0">
+                    <img id="modal-img" src="" alt="Produto" class="w-full h-full object-cover transition-all duration-300 no-scrollbar">
+                    
+                    <!-- Botões do Carrossel -->
+                    <button id="btn-prev-img" class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 backdrop-blur rounded-full flex items-center justify-center text-gray-800 shadow-md hidden hover:bg-white transition-colors z-10">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button id="btn-next-img" class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 backdrop-blur rounded-full flex items-center justify-center text-gray-800 shadow-md hidden hover:bg-white transition-colors z-10">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                    
+                    <!-- Indicador de página -->
+                    <div id="image-counter" class="absolute bottom-3 right-3 bg-black/50 text-white text-xs font-bold px-2 py-1 rounded-full backdrop-blur hidden">
+                        1/1
+                    </div>
+                </div>
+            </div>
+                <div class="p-5 border-t-2 border-brand-light">
                     <h2 id="modal-title" class="text-2xl font-bold mb-1"></h2>
                     <p id="modal-desc" class="text-gray-500 text-sm mb-4 leading-relaxed"></p>
                     <div class="text-2xl font-extrabold text-brand-cyan mb-6" id="modal-price"></div>

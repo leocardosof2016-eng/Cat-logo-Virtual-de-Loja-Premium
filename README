@@ -45,6 +45,8 @@ Modificações ideais que ainda podem ser realizadas:
     <img id="modal-img" src="" alt="Produto" class="w-full max-h-96 object-contain bg-gray-50 mt-4">
         Melhor opção até agora, porém, fica bastante espaço dos lados.
 
+    Além disso, as imagens possuem uma scrollbar que não é esteticamente agradável.
+
 -> O modelo de busca não precisa necessariamente criar um modal novo. Nesse caso, os produtos apareceriam no <main> de acordo com o searchTerm.
 -> Avaliar a possibilidade de retirar o id dos itens
 -> Avaliar a possibilidade de alinhar os elementos da <nav> no centro sem utilizar apenas o justify-center, pois perde responsividade no mobile.
