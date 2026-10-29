@@ -323,6 +323,6 @@ document.getElementById('btn-send-whatsapp').addEventListener('click', () => {
     text += `\n\n*Total a pagar: ${formatMoney(total)}*`;
     
     const encodedText = encodeURIComponent(text);
-    const phoneNumber = "5573998555315"; //Número da empresa
+    const phoneNumber = "557398555315"; //Número da empresa
     window.open(`https://wa.me/${phoneNumber}?text=${encodedText}`, '_blank');
 });
